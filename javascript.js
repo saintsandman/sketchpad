@@ -20,7 +20,7 @@ make like a loop
 
 const container = document.querySelector(".container");
 
-for (let i = 0; i < 16; i++) {
+for (let i = 0; i < 256; i++) {
 
   box = document.createElement("div");
   container.appendChild(box);

@@ -1,9 +1,21 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
 .container {
   display: flex;
+  flex-wrap: wrap;
+  width: 440px;
+  height: auto;
 }
 
 .container div {
   border: 1px solid black;
   height: 25px;
   width: 25px;
+  flex: auto;
 }
