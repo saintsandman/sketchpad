@@ -18,3 +18,11 @@ for (let i = 0; i < 256; i++) {
   container.appendChild(box);
 }
 
+let boxes = document.querySelectorAll("div.box");
+
+boxes.forEach((square) => {
+  square.addEventListener("mouseenter", () => {
+    square.style.backgroundColor = "red";
+  });
+});
+
