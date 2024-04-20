@@ -26,3 +26,12 @@ boxes.forEach((square) => {
   });
 });
 
+btn = document.querySelector("button");
+
+function changeSize(input) {
+  prompt ("Enter grid size (e.g. '20' for 20x20)");
+}
+
+btn.addEventListener("click", () => {
+  changeSize();
+})
