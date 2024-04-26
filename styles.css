@@ -22,17 +22,19 @@ html, body {
 }
 
 .row {
-  flex: 1;
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
 }
 
 .box {
   border: 1px solid black;
-  height: 24px;
+  min-height: 1px;
   width: auto;
   aspect-ratio: 1/1;
   padding: 0;
   margin: 0;
-  flex: 1;
+  flex: 1 1;
   
 }
 

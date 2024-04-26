@@ -45,13 +45,8 @@ btn.addEventListener("click", () => {
    changeSize(input);
 })
 
-/* prompt for size
-use size as input
-function that deletes all of the divs
-then makes a # of containers = to the input number
-then it creates and appends a number of square divs = to input number into each container
-start with that
-
-ok now you need to do the row thing to the original 
-16x16 so its the same sort of row with boxes in em system.*/ 
+/* 
+need to figure out how to make rows stop overflowing 
+when it gets too high
+*/ 
 
