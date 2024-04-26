@@ -1,10 +1,10 @@
-const container = document.querySelector(".container");
+const container2 = document.querySelector(".container2");
 
 function changeSize(size) {
   for (let i = 0; i < size; i++) {
     let row = document.createElement("div");
     row.classList.add("row");
-    container.appendChild(row);
+    container2.appendChild(row);
   }
   
   let rows = document.querySelectorAll("div.row");
