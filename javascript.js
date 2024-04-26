@@ -21,14 +21,19 @@ function removeGrid() {
 }
 
 function changeSize(size) {
-  
+  for (let i = 0; i < size; i++) {
+    row = document.createElement("div");
+    row.classList.add("row");
+    container.appendChild(row);
+  }
 }
 
 btn = document.querySelector("button");
 
 btn.addEventListener("click", () => {
    input = prompt ("Enter grid size (e.g. '20' for 20x20)");
-   removeGrid()
+   removeGrid();
+   changeSize(input);
 })
 
 /* prompt for size
