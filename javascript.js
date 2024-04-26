@@ -14,14 +14,21 @@ boxes.forEach((square) => {
   });
 });
 
-function changeSize(input) {
- 
+function removeGrid() {
+  boxes.forEach((square) => {
+    square.remove();
+  })
+}
+
+function changeSize(size) {
+  
 }
 
 btn = document.querySelector("button");
 
 btn.addEventListener("click", () => {
-   size = prompt ("Enter grid size (e.g. '20' for 20x20)");
+   input = prompt ("Enter grid size (e.g. '20' for 20x20)");
+   removeGrid()
 })
 
 /* prompt for size
