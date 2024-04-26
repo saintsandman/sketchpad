@@ -1,15 +1,3 @@
-
-
-
-
-/* 16*16 grid of square divs
-when you hover mouse over a div/boxes, 
-it changes the color
-
-*/
-
-
-
 const container = document.querySelector(".container");
 
 for (let i = 0; i < 256; i++) {
@@ -26,12 +14,20 @@ boxes.forEach((square) => {
   });
 });
 
-btn = document.querySelector("button");
-
 function changeSize(input) {
-  prompt ("Enter grid size (e.g. '20' for 20x20)");
+ 
 }
 
+btn = document.querySelector("button");
+
 btn.addEventListener("click", () => {
-  changeSize();
+   size = prompt ("Enter grid size (e.g. '20' for 20x20)");
 })
+
+/* prompt for size
+use size as input
+function that deletes all of the divs
+then makes a # of containers = to the input number
+then it creates and appends a number of square divs = to input number into each container
+start with that */ 
+
