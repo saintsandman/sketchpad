@@ -18,18 +18,31 @@ function changeSize(size) {
   })
 }
 
+let boxcolor;
+
+function randomRGB() {
+ const max = 255;
+ const min = 0;
+
+  let color1 = Math.floor(Math.random() * (max - min + 1) - min);
+  let color2 = Math.floor(Math.random() * (max - min + 1) - min);
+  let color3 = Math.floor(Math.random() * (max - min + 1) - min);
+
+  boxcolor = "rgb(" + color1 + "," + " " + color2 + "," + " " + color3 + ")"
+}
+
 function colorSquare() {
   let boxes = document.querySelectorAll("div.box");
 
   boxes.forEach((square) => {
     square.addEventListener("mouseenter", () => {
-      square.style.backgroundColor = "red";
+      randomRGB();
+      square.style.backgroundColor = boxcolor;
     });
   });
 }
 
-changeSize(16);
-colorSquare();
+
 
 function removeGrid() {
   let rows = document.querySelectorAll("div.row");
@@ -37,6 +50,11 @@ function removeGrid() {
     row.remove();
   })
 }
+
+changeSize(16);
+colorSquare();
+
+
 
 
 
@@ -53,6 +71,6 @@ btn.addEventListener("click", () => {
 /* 
 randomize rgb of square color
 
-ok first separate the function
+run a function that randomizes 
 */ 
 
