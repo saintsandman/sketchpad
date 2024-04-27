@@ -15,7 +15,10 @@ function changeSize(size) {
       box.classList.add("box");
       row.appendChild(box);
     }
-  
+  })
+}
+
+function colorSquare() {
   let boxes = document.querySelectorAll("div.box");
 
   boxes.forEach((square) => {
@@ -23,10 +26,10 @@ function changeSize(size) {
       square.style.backgroundColor = "red";
     });
   });
-  })
 }
 
 changeSize(16);
+colorSquare();
 
 function removeGrid() {
   let rows = document.querySelectorAll("div.row");
@@ -43,10 +46,13 @@ btn.addEventListener("click", () => {
    input = prompt ("Enter grid size (e.g. '20' for 20x20)");
    removeGrid();
    changeSize(input);
+   colorSquare();
+
 })
 
 /* 
-need to figure out how to make rows stop overflowing 
-when it gets too high
+randomize rgb of square color
+
+ok first separate the function
 */ 
 
