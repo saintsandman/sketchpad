@@ -42,8 +42,6 @@ function colorSquare() {
   });
 }
 
-
-
 function removeGrid() {
   let rows = document.querySelectorAll("div.row");
   rows.forEach((row) => {
@@ -55,25 +53,32 @@ changeSize(16);
 colorSquare();
 
 
+function gridPrompt() {
+  input = Number(prompt ("Enter desired grid size (e.g. '20' for 20x20) to a max of 100"));
 
+  if (input > 100) {
+    input = 100;
+   }
+
+  if (Number.isInteger(input) === false) {
+    alert ("ERROR: Please enter a valid integer between 1-100");
+    return gridPrompt();
+  } else {
+    return input;
+  }
+
+}
 
 
 btn = document.querySelector("button");
 
 btn.addEventListener("click", () => {
-   input = prompt ("Enter desired grid size (e.g. '20' for 20x20) to a max of 100");
-   if (input > 100) {
-    input = 100;
-   }
+   input = gridPrompt();
    removeGrid();
    changeSize(input);
    colorSquare();
 
 })
 
-/* 
-randomize rgb of square color
 
-run a function that randomizes 
-*/ 
 
