@@ -61,7 +61,10 @@ colorSquare();
 btn = document.querySelector("button");
 
 btn.addEventListener("click", () => {
-   input = prompt ("Enter grid size (e.g. '20' for 20x20)");
+   input = prompt ("Enter desired grid size (e.g. '20' for 20x20) to a max of 100");
+   if (input > 100) {
+    input = 100;
+   }
    removeGrid();
    changeSize(input);
    colorSquare();
